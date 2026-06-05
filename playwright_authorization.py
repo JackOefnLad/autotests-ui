@@ -26,5 +26,5 @@ with sync_playwright() as playwright:
     expect(wrong_email_or_password_alert).to_be_visible()  # Проверяем видимость элемента
     expect(wrong_email_or_password_alert).to_have_text("Wrong email or password")  # Проверяем текст
 
-    # Пауза на 5 секунд, чтобы увидеть результат
     page.wait_for_timeout(5000)
+    browser.close()
