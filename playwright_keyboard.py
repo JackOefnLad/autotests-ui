@@ -11,6 +11,10 @@ with sync_playwright() as playwright:
     email_input = page.get_by_test_id('login-form-email-input').locator('input')
     email_input.focus()
 
+    # page.keyboard.insert_text("Тест моментального ввода")
+    # page.keyboard.down("Digit9")
+    # page.keyboard.type("World", delay=100)
+    
     for character in "user@mail.com":
         page.keyboard.press(character, delay=300)
 
